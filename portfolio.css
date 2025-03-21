@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+}
+
+/* Social Media Icons at the Top */
+.top-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+.social-icons a img {
+    width: 30px;
+    margin-left: 15px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('./background.avif') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 10%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    gap: 50px;
+}
+
+.left {
+    flex: 1;
+}
+
+.left h1 {
+    font-size: 36px;
+}
+
+.highlight {
+    color: #00ffaa;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00ffaa;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.right img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #00ffaa;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+}
+
+/* Gallery - 3 Column Layout */
+.gallery {
+    text-align: center;
+    padding: 50px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.gallery-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    gap: 50px;
+}
+
+.contact-left {
+    flex: 1;
+}
+
+.contact-right {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1); /* Transparent Background */
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Glassmorphism Effect */
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-right input, .contact-right textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.contact-right button {
+    padding: 10px;
+    background: #00ffaa;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .skills, .gallery-container, .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
